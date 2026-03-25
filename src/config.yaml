@@ -1,0 +1,78 @@
+# EOPF STAC MCP Configuration
+STAC_URL:  "https://stac.core.eopf.eodc.eu"
+# LLM Provider Selection
+# Options: "claude", "local", or "ovh"
+llm_provider: "ovh"
+
+# Claude API Configuration
+# "claude-haiku-4-5-20251001"
+#claude-opus-4-6"
+claude:
+  model: "claude-haiku-4-5-20251001"
+  max_tokens: 4096
+  temperature: 0.7
+
+# OVH AI Endpoints Configuration
+ovh:
+  base_url: "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1"
+  model: "Qwen3-32B"  # Changed from Qwen3Guard (safety model) to instruction model
+  max_tokens: 4096
+  temperature: 0.7
+  # API token loaded from .env: OVH_AI_ENDPOINTS_ACCESS_TOKEN
+
+# Local LLM Configuration
+local_llm:
+  # Provider options: "ollama", "llamacpp", "vllm"
+  provider: "ollama"
+
+  # Ollama settings
+  ollama:
+    base_url: "http://localhost:11434"
+    model: "qwen3.5:35b"  # 35B model for better quality
+    # Other options:
+    # "qwen3.5" or "qwen3.5:latest" - 8B model (6GB RAM)
+    # "qwen3.5:14b" - 14B model (12GB RAM)
+    # "qwen3.5:72b" - 72B model (48GB RAM) - Best quality
+
+  # LlamaCpp settings (alternative)
+  llamacpp:
+    model_path: "/path/to/model.gguf"
+    n_ctx: 4096
+    n_gpu_layers: 35
+
+  # vLLM settings (alternative)
+  vllm:
+    base_url: "http://localhost:8000"
+    model: "meta-llama/Llama-3.1-8B-Instruct"
+
+  # Generation parameters
+  max_tokens: 4096
+  temperature: 0.7
+  top_p: 0.9
+
+# MCP Server Configuration
+mcp:
+  stac_url: "https://stac.core.eopf.eodc.eu"
+  default_search_limit: 10
+
+# Gradio Configuration
+gradio:
+  server_name: "0.0.0.0"
+  server_port: 7860
+  share: true
+
+# API Server Configuration (FastAPI backend for React frontend)
+api:
+  host: "0.0.0.0"
+  port: 8000
+  cors_origins:
+    - "http://localhost:5173"  # Vite dev server
+    - "http://localhost:5174"  # Vite dev server (alternate port)
+    - "http://localhost:3000"  # Alternative dev server
+  session_storage_dir: ".sessions"
+  max_sessions_per_user: 50
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file: "eopf_mcp.log"
