@@ -1,0 +1,15 @@
+{
+  "id": "9a257efc-5564-4c9f-a518-210aebe492d7",
+  "title": "Chat 2026-03-25 09:03",
+  "created_at": "2026-03-25T09:03:23.768442",
+  "updated_at": "2026-03-25T09:03:25.171196",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Search for Sentinel-2 L2A in the Alps region",
+      "timestamp": "2026-03-25T09:03:25.171079",
+      "tool_calls": null
+    }
+  ],
+  "metadata": {}
+}

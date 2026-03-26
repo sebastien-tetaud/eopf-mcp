@@ -1,6 +1,0 @@
---2026-03-19 14:20:54--  https://api.explorer.eopf.copernicus.eu/raster/collections/sentinel-2-l2a/items/S2B_MSIL2A_20251024T101029_N0511_R022_T32TQR_20251024T122954/tiles/WebMercatorQuad/%7Bz%7D/%7Bx%7D/%7By%7D.png?variables=%2Fmeasurements%2Freflectance%3Ab04
-Resolving api.explorer.eopf.copernicus.eu (api.explorer.eopf.copernicus.eu)... 57.129.21.11
-Connecting to api.explorer.eopf.copernicus.eu (api.explorer.eopf.copernicus.eu)|57.129.21.11|:443... connected.
-HTTP request sent, awaiting response... 422 Unprocessable Entity
-2026-03-19 14:20:54 ERROR 422: Unprocessable Entity.
-

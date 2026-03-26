@@ -2,7 +2,7 @@
 STAC_URL:  "https://stac.core.eopf.eodc.eu"
 # LLM Provider Selection
 # Options: "claude", "local", or "ovh"
-llm_provider: "ovh"
+llm_provider: "local"
 
 # Claude API Configuration
 # "claude-haiku-4-5-20251001"

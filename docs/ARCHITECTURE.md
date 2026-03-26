@@ -278,7 +278,7 @@ sequenceDiagram
 ```mermaid
 sequenceDiagram
     participant User
-    participant Gradio
+    participant Frontend
     participant LLM as LLM Provider
     participant MCP as MCP Server
     participant STAC as STAC Catalog

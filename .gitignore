@@ -1,5 +1,11 @@
 eopf-sample-notebooks/
 .claude
+
+# Project-specific
+data/
+config/config.yaml
+*.log
+wget-log*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
